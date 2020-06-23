@@ -1,0 +1,79 @@
+---
+apiVersion: v1
+kind: Service
+metadata:
+  annotations:
+    kompose.cmd: kompose convert -f oracle.yaml
+    kompose.version: 1.21.0 (992df58d8)
+  creationTimestamp: null
+  labels:
+    io.kompose.service: iib-service
+  name: iib-service
+spec:
+  type: NodePort
+  ports:
+  - name: "integrationadmin"
+    port: 4414
+    targetPort: 4414
+    nodePort: 30001
+  - name: "integrationhttp"
+    port: 7800
+    targetPort: 7800
+    nodePort: 30002
+  - name: "mqlistner"
+    port: 1414
+    targetPort: 1414
+    nodePort: 30003
+  selector:
+    io.kompose.service: iib-service
+status:
+  loadBalancer: {}  
+
+---
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  annotations:
+    kompose.cmd: kompose convert -f oracle.yaml
+    kompose.version: 1.21.0 (992df58d8)
+  creationTimestamp: null
+  labels:
+    io.kompose.service: iib-service
+  name: iib-service
+spec:
+  replicas: 1
+  selector:
+    matchLabels:
+      io.kompose.service: iib-service
+  strategy:
+    type: Recreate
+  template:
+    metadata:
+      annotations:
+        kompose.cmd: kompose convert -f oracle.yaml
+        kompose.version: 1.21.0 (992df58d8)
+      creationTimestamp: null
+      labels:
+        io.kompose.service: iib-service
+    spec:
+      containers:
+      - env:
+        - name: LICENSE
+          value: accept
+        - name: NODENAME
+          value: miyaintegrationnode
+        - name: SERVERNAME
+          value: miyaintegrationserver
+        - name: MQ_QMGR_NAME
+          value: miyaqmgr
+        image: miya/iib:1.0
+        imagePullPolicy: ""
+        name: iib
+        ports:
+        - containerPort: 4414
+        - containerPort: 7800
+        - containerPort: 1414
+        resources: {}
+      restartPolicy: Always
+      serviceAccountName: ""
+status: {}
