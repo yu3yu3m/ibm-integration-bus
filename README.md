@@ -18,7 +18,7 @@ http://localhost:30001
 ## 4. Access your application
 http://localhost:30002/YOUR_APPLICATION_URL
 
-### end.sh to terminate
+## end.sh to terminate
 
 ### My Sample Application (If you have your application, please use it)
 I create sample application by referring this video. Thanks!<br>
