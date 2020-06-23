@@ -1,4 +1,4 @@
-# IBM-Integration-Bus
+# IBM Integration Bus
 
 ## Official dockerfile
 https://github.com/ot4i/iib-docker
