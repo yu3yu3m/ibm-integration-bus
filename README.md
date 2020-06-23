@@ -1,11 +1,12 @@
 # IBM Integration Bus
 
-## Official dockerfile
+## Official dockerfile 
 https://github.com/ot4i/iib-docker
-
+(公式Dockerイメージ)
 
 Please note that this url is available. <br>
 https://github.com/ot4i/iib-docker/blob/master/10.0.0.11/iib-mq-server/Dockerfile#L10
+(Dockerfile内のプロダクトへのurlが有効でないとビルドに失敗します)
 
 
 ## 1. start.sh
@@ -30,8 +31,11 @@ http://localhost:30002/YOUR_APPLICATION_URL
           value: miyaqmgr
 ```
 
-### How to auto deploy
-Please add line like below in Dockerfile.
+### How to auto deploy?
+If you put your BAR file in /tmp/BARs/, it is auto-deployed at running.
+/tmp/BARs/にBARファイルを配置すると、起動時に自動的にデプロイされます。
+<br>
+Example:
 ```
 COPY SampleApp.bar /tmp/BARs/
 ```
