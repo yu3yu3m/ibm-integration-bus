@@ -20,6 +20,16 @@ http://localhost:30002/YOUR_APPLICATION_URL
 
 ## end.sh to terminate
 
+## Configuration (yml file)
+```
+        - name: NODENAME
+          value: miyaintegrationnode
+        - name: SERVERNAME
+          value: miyaintegrationserver
+        - name: MQ_QMGR_NAME
+          value: miyaqmgr
+```
+
 ### My Sample Application (If you have your application, please use it)
 I create sample application by referring this video. Thanks!<br>
 https://www.youtube.com/watch?v=yFm_AtdWA_k
