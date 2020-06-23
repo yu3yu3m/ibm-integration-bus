@@ -1,6 +1,6 @@
-# ibm-integration-bus
+# IBM-Integration-Bus
 
-## Official Dockerfile
+## Official dockerfile
 https://github.com/ot4i/iib-docker
 
 Please note that this url is available.
