@@ -18,7 +18,7 @@ http://localhost:30001
 ## 4. Access your application
 http://localhost:30002/YOUR_APPLICATION_URL
 
-## end.sh to terminate
+*Please execute end.sh to terminate.
 
 ## Configuration (yml file)
 ```
