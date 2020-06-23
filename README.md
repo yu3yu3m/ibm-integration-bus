@@ -1,5 +1,9 @@
 # IBM Integration Bus
 
+## Lecture video
+(Japanese) https://www.youtube.com/watch?v=XIh8Ri1759Q  <br>
+(English) https://www.youtube.com/watch?v=ZcHraAh9Usg
+
 ## Official dockerfile 
 https://github.com/ot4i/iib-docker
 (公式Dockerイメージ)
