@@ -21,5 +21,5 @@ http://localhost:30002/YOUR_APPLICATION_URL
 ### end.sh to terminate
 
 ### Sample Application
-I create sample application by referring this video<br>
+I create sample application by referring this video. Thanks!<br>
 https://www.youtube.com/watch?v=yFm_AtdWA_k
