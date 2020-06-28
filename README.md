@@ -1,17 +1,8 @@
 # IBM Integration Bus
 
-## Lecture video
+## How to use
 (Japanese) https://www.youtube.com/watch?v=XIh8Ri1759Q  <br>
 (English) https://www.youtube.com/watch?v=ZcHraAh9Usg
-
-## Official dockerfile 
-https://github.com/ot4i/iib-docker
-(公式Dockerイメージ)
-
-Please note that this url is available. <br>
-https://github.com/ot4i/iib-docker/blob/master/10.0.0.11/iib-mq-server/Dockerfile#L10  <br>
-(Dockerfile内のプロダクトへのurlが有効でないとビルドに失敗します)
-
 
 ## 1. start.sh
 
@@ -46,3 +37,17 @@ COPY SampleApp.bar /tmp/BARs/
 ### My Sample Application (If you have your application, please use it)
 I create sample application by referring this video. Thanks!<br>
 https://www.youtube.com/watch?v=yFm_AtdWA_k
+
+## Reference
+## Official dockerfile 
+https://github.com/ot4i/iib-docker
+(公式Dockerイメージ)
+
+Please note that this url is available. <br>
+https://github.com/ot4i/iib-docker/blob/master/10.0.0.11/iib-mq-server/Dockerfile#L10  <br>
+(Dockerfile内のプロダクトへのurlが有効でないとビルドに失敗します)
+
+
+
+
+
